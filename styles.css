@@ -314,3 +314,13 @@ button,input{font:inherit}
   .image-sheet{width:calc(100% - 18px);height:calc(100% - 40px);padding:6px;}
   .image-modal-sheet{height:64vh;padding:10px;}
 }
+
+/* Mobile projects: keep desktop/tablet layout unchanged; stack project cards on phones. */
+@media (max-width: 620px){
+  #projects .projects-grid{
+    grid-template-columns: 1fr !important;
+  }
+  #projects .project-card{
+    width: 100%;
+  }
+}
