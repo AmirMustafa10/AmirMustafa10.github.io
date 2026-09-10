@@ -324,3 +324,52 @@ button,input{font:inherit}
     width: 100%;
   }
 }
+
+/* Mobile certificate modal: keep the full certificate visible and the close button fully in view. */
+@media (max-width: 620px){
+  .cert-modal{
+    padding:10px;
+    place-items:center;
+    overflow-y:auto;
+  }
+  .cert-modal-dialog{
+    width:min(94vw, 430px);
+    max-height:calc(100vh - 20px);
+    grid-template-columns:1fr;
+    border-radius:20px;
+    overflow:hidden;
+  }
+  .cert-modal-close{
+    top:8px;
+    right:8px;
+    width:32px;
+    height:32px;
+    font-size:18px;
+    line-height:1;
+  }
+  .cert-modal-preview{
+    padding:30px 12px 12px;
+  }
+  .image-modal-sheet{
+    min-height:0;
+    height:auto;
+    max-height:54vh;
+    padding:8px;
+    border-radius:14px;
+  }
+  .image-modal-sheet img{
+    width:100%;
+    height:auto;
+    max-height:50vh;
+    object-fit:contain;
+  }
+  .cert-modal-content{
+    padding:16px 18px 18px;
+  }
+  .cert-modal-content h3{
+    margin-top:0;
+  }
+  .cert-modal-content p{
+    margin-bottom:8px;
+  }
+}
